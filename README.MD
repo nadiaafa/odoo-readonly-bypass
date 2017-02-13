@@ -14,18 +14,19 @@ Install the module.
 To change that behavior you have to set context in xml file on "ir.actions.act_window":
 ```xml
 <record id="sale.action_quotations" model="ir.actions.act_window">
-<field name="context">{'readonly_by_pass': True}</field>
+    <field name="context">{'readonly_by_pass': True}</field>
 </record>```
+
 
 or by telling fields allowed to change:
 
 
 ```xml 
 <record id="sale.action_quotations" model="ir.actions.act_window">
-<field name=”context”>
-{'readonly_by_pass': ['readonly_field_1', 'readonly_field_2',]}
-</field>
+    <field name="context">{'readonly_by_pass': ['readonly_field_1', 'readonly_field_2',]}</field>
 </record>```
+
+
 
 On one2many fields, you can also pass the context in the field definition:
 
